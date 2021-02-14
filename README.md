@@ -8,7 +8,7 @@
 
 
 
-# <img src="https://github.com/sagnik106/EdTutor/blob/master/static/images/favicon.png" width="5%">TutorAI
+# <img src="https://github.com/Aditi-Chowdhuri/TutorAI/blob/master/static/images/favicon.png" width="5%">TutorAI
 TutorAI is an educational platform and Web App that uses state of the art AI technology to provide personal and effective training in the field of Physical Education. It aims to revolutionalize the quality of learning dance, yoga, martials arts, etc that require precision in the body posture. The main objective is to create an online personal trainer and a common learning platform to bridge the gap between the learners and the trainers. 
 
 ### USP
