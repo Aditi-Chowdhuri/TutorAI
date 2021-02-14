@@ -79,6 +79,13 @@ $final_app.py
 
 ```
 
+## What we Learned
+There are a lot of new things that we learned in this entire hack duration like:
+--> Using multiple deep learning models and combining them together to a single platform. 
+--> Connecting firebase to live website
+--> Complete integration of frontend and backend using flask
+--> Plotting complex graphs using plotly
+
 ## Future Aspects
 
 We aim to build an application where more people learn things that they think cannot be done without trainers by providing a personal trainer in their hands and take this project on large scale where this application will not just be a learning platform but also a place where people can spend their quality time in other interactive and healthy activities. We want to build a social training platform where people can connect with each other and a feed system where people can write blogs and articles on health, exercises and fitness and also associate NGOs and awareness camps which work towards these activities.
