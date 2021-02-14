@@ -1,4 +1,3 @@
-
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 <a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/Tensorflow-v2.2.0-orange?style=for-the-badge&logo=tensorflow"></a>
@@ -9,7 +8,7 @@
 
 
 
-# <img src="https://github.com/sagnik106/EdTutor/blob/master/static/images/favicon.png" width="5%">EdTutor
+# <img src="https://github.com/sagnik106/EdTutor/blob/master/static/images/favicon.png" width="5%">TutorAI
 EdTutor is an educational platform and Web App that uses state of the art AI technology to provide personal and effective training in the field of Physical Education. It aims to revolutionalize the quality of learning dance, yoga, martials arts, etc that require precision in the body posture. The main objective is to create an online personal trainer and a common learning platform to bridge the gap between the learners and the trainers. 
 
 ### USP
@@ -89,10 +88,8 @@ We aim to build an application where more people learn things that they think ca
 
 * [**Shaashwat Agrawal**](https://github.com/Shaashwat05) 
 * [**Sagnik Sarkar**](https://github.com/sagnik106) 
-* [**Ajay Venkatesh**](https://github.com/Ajay-Venky) 
 * [**Aditi Chowdhuri**](https://github.com/Aditi-Chowdhuri)
 * [**Shobhit Tulshain**](https://github.com/Shobhit2000) 
-
 
 
 
