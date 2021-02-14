@@ -1,0 +1,147 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background:
+    linear-gradient(135deg, #fdbb75 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #fdbb75 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #fdbb75 25%, transparent 25%),
+    linear-gradient(45deg, #fdbb75 25%, transparent 25%);
+    background-size: 2em 2em;
+    background-color: #e7743a;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    margin: 0;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #202124;
+    width: 540px;
+    height: 540px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.main_s {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #202124;
+    width: 540px;
+    height: 800px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+    color: orange;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.un {
+    width: 400px;
+    height: 60px;
+    color: white; 
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 1px;
+    background: #525356;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.radio{
+    width: 76%;
+    color: white; 
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: #525356;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.un:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    /* color: #660000;
+    color: #ff9964;
+    color: #ffddb9; */
+}
+
+.submit {
+    height: 50px;
+    width: 150px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, orangered, orange);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: orange;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+a {
+    font-size: 21px;
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: orange;
+    text-decoration: none
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>404 Not Found</title>
+        <link rel="icon" href="../static/images/favicon.png">
+    </head>
+    <body style="margin: 0;background-image: linear-gradient(to right, #0b0e0b , #8C55AA);">
+        <div style="display: flex; flex-flow: column; justify-content: center; align-items: center;color: #FFFFFF; height: 100vh;">
+            <h1>404: NOT FOUND</h1>
+            <h3>Check the url you have entered. It just doesn't feel like the right place!?</h3>
+        </div>
+        <div id="vantaWaves"></div>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/vendor/three.r119.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+      <script>
+        VANTA.FOG({
+            el: "#vantaWaves",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0xcf5fea,
+            midtoneColor: 0x434bf9,
+            lowlightColor: 0x6e41c7,
+            baseColor: 0x202020,
+            blurFactor: 0.79,
+            speed: 5.00
+            });
+        </script>
+    </body>
+</html>

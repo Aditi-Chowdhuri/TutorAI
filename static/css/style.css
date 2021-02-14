@@ -1,0 +1,271 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient( 90deg,
+  rgba(255, 225, 132, .7) 50%, rgba(255,255,255, 0) 50%),
+  linear-gradient( 90deg,
+  rgba(32, 113, 120, .3) 50%, rgba(255,255,255, 0) 50%),
+  linear-gradient( 90deg,
+  rgba(255, 150, 102, .3) 50%, rgba(255,255,255, 0) 50%),
+  linear-gradient( 90deg,
+  rgba(23, 76, 79, .1) 50%, rgba(255,255,255, 0) 50%);
+  background-size: 7em 7em, 5em 5em, 3em 3em, 1em 1em;
+  background-color: #ffaa4f;
+}
+#vantaWaves{
+  position: absolute;
+  display: block;
+  min-width: 100%;
+  min-height: 290vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #202124;
+  padding: 15px;
+  top: 0;
+  position: sticky;
+}
+
+.topnav p {
+    float: left;
+    display: block;
+    color:#ff8f18;
+    text-align: center;
+    margin: 1vw;
+    margin-right: 2vw;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #e6560e;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #202124;
+  color: #C42CC4;
+}
+
+
+.topnav .search-container {
+  float: left;
+  margin-top: 10px;
+  width: 500px;
+  height: 35px;
+  border: 0px solid;
+  border-radius: 20px;
+  background: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 1px;
+  font-size: 17px;
+  border: none;
+  width: 400px;
+  color:#202124;
+}
+
+.topnav .search-container p {
+  float: left;
+  padding: 6px 10px;
+  margin-top: 1px;
+  margin-right: 16px;
+  background: white;
+  color:#202124;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 35px;
+}
+
+.sidenav {
+    height: 600px;
+    width: 200px;
+    float: left;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #292f32;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 5vh;
+    margin-left: 20vw;
+    margin-right: 10px;
+    border: 0px solid;
+    border-radius: 15px;
+    opacity: 0.72;
+  }
+
+  .sidenav p {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #707070;
+    display: block;
+  }
+  
+  .sidenav hr {
+    margin: 15px;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #707070;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 600px;
+    height: 600px;
+    width: 910px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#292f32;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 5vh;
+    border: 0px solid;
+    border-radius: 15px;
+    opacity: 1;
+  }
+
+  .main h2{
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f1f1f1;
+    display: block;
+  }
+
+  .main label{
+    padding: 6px 6px 0px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #f1f1f1;
+    display: block;
+  }
+
+  .main input[type=text],input[type=date],input[type=email],textarea{
+    width: 90%;
+    padding: 8px 10px;
+    margin: 0px;
+    margin-left: 35px;
+    display: inline-block;
+    border: 0px solid;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .main input[type=submit] {
+    height: 50px;
+    width: 150px;
+    display: inline-block;
+    border: 0px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, orangered, orange);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35px;
+    font-size: 20px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 40%;
+    padding: 0 10px;
+    margin-bottom: 3vh;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 6px;
+    text-align: left;
+    background-color: #6A6A6ACC;
+    color: #fff;
+    border: 0px solid;
+    border-radius: 20px;
+    height: 200px;
+    overflow-x: hidden;
+  }
+  .card:hover{
+    background-color: #6A6A6AFF;
+  }
+  .card img{
+    width: 170px;
+    height: 170px;
+    padding: 10px;
+    margin-bottom: 10px;
+    float: left;
+    background-color: #fff;
+    margin-right: 1vh;
+    border: 0px solid;
+    border-radius: 20px;
+  }
+
+  .ana{
+    margin-left: 20vw;
+    top: 0;
+    left: 0;
+    height: 550px;
+    width: 910px;
+    overflow-x: hidden;
+    padding: 0px 10px;
+    padding-top: 5px;
+    margin-top: 5vh;
+    font-size: 28px; /* Increased text to enable scrolling */   
+    background-color: #202124;
+    opacity: 1;
+    border-radius: 20px;
+  }
+
+  .ana p{
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 22px;
+}

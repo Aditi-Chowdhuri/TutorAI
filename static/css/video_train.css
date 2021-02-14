@@ -1,0 +1,194 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient( 90deg,
+  rgba(255, 225, 132, .7) 50%, rgba(255,255,255, 0) 50%),
+  linear-gradient( 90deg,
+  rgba(32, 113, 120, .3) 50%, rgba(255,255,255, 0) 50%),
+  linear-gradient( 90deg,
+  rgba(255, 150, 102, .3) 50%, rgba(255,255,255, 0) 50%),
+  linear-gradient( 90deg,
+  rgba(23, 76, 79, .1) 50%, rgba(255,255,255, 0) 50%);
+  background-size: 7em 7em, 5em 5em, 3em 3em, 1em 1em;
+  background-color: #ffaa4f;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #202124;
+  padding: 15px;
+  top: 0;
+  position: sticky;
+}
+
+.topnav p {
+  float: left;
+  display: block;
+  color:#ff8f18;
+  text-align: center;
+  margin: 1vw;
+  margin-right: 2vw;
+  text-decoration: none;
+  font-size: 20px;
+  }
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #e6560e;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #202124;
+  color: #C42CC4;
+}
+
+
+.topnav .search-container {
+  float: left;
+  margin-top: 10px;
+  width: 500px;
+  height: 35px;
+  border: 0px solid;
+  border-radius: 20px;
+  background: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 1px;
+  font-size: 17px;
+  border: none;
+  width: 400px;
+  color:#202124;
+}
+
+.topnav .search-container p {
+  float: left;
+  padding: 6px 10px;
+  margin-top: 1px;
+  margin-right: 16px;
+  background: white;
+  color:#202124;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 35px;
+}
+
+.sidenav {
+    height: 600px;
+    width: 280px;
+    margin-right: 10px !important;
+    z-index: 1;
+    top: 0;
+  float: left;
+    background-color: #292f32;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 15vh;
+    margin-left: 2vw;
+    border: 0px solid;
+    border-radius: 15px;
+    opacity: 1;
+  }
+
+  .sidenav p {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 21px;
+    color: #4DB3E6;
+    display: block;
+  }
+  
+  .sidenav hr {
+    margin: 15px;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #707070;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .video {
+    margin-left: -150px;
+    height: 400px;
+    width: 700px;
+
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 16vh;
+    border: 0px solid;
+    opacity: 1;
+  }
+
+  .main {
+    margin-left: 150px;
+    width: 1300px;
+    float: left;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding: 0px 10px;
+    padding-top: 20px;
+    margin-top: 16vh;
+    font-size: 28px; /* Increased text to enable scrolling */
+  
+  }
+  .main p{
+    margin-left: 340px;
+    position: fixed;
+    top: 405px;
+    left: 0;
+    overflow-x: hidden;
+    padding: 0px 10px;
+    padding-top: 20px;
+    margin-top: 16vh;
+    font-size: 15px; 
+    color: #fff;
+  }
+
+  .main a{
+    margin-left: 940px;
+    position: fixed;
+    top: 500px;
+    left: 0;
+    margin-top: 16vh;
+    font-size: 15px; 
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #4DB3E6;
+    background: #202124;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+  }
+
+  

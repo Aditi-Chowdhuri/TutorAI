@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  
+  <title>Profile</title>
+  <link rel="icon" href="../static/images/favicon.png">
+  <style>
+    #vantaWaves{
+      min-height: 200vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="vantaWaves"></div>
+  <div class="topnav" style="z-index: 99;">
+    <div style=" margin-left: 10vw;">
+      <a href="/" style="float:left; margin:-20px;"><p><img style="width: 75px; height: 75px; margin:-20px;" src="../static/images/favicon.png" alt="" /></p>
+      <p style="font-size: 70px; margin: -10px; margin-left: 10px; font-family: 'Times New Roman', Times, serif;">EdTutor</p></a>
+    </div>
+    <div style=" margin-right: 10vw;">
+      <a href="/profile"><img style="width: 30px; height: 30px;" src="../static/images/profileicon.png" alt="" /></a>
+      <a href="/landing"><p style="font-size: 30px; margin: -3px;">My Tutorial</p></a>
+      <a href="/logout"><p style="font-size: 30px; margin: -3px;">Logout</p></a>
+    </div>
+  </div>
+      
+      <!--div class="sidenav">
+        <p>{{userdet['name']}}</p>
+        <hr>    
+      </div-->
+      
+      <div class="main" style = "margin-left: 20vw;">
+        <h2>Basics:</h2>
+        <form method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" value="{{userdet['name']}}">
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" name="dob" value="{{userdet['dob']}}">
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" value="{{userdet['email']}}">
+            <label for="phno">Phone:</label><br>
+            <input type="text" name="phno" value="{{userdet['phno']}}">
+            <label for="bio">Bio:</label><br>
+            <textarea name="bio" rows="4" cols="50">{{userdet['bio']}}</textarea><br><br>
+            <input type="submit" value="Submit">
+          </form> 
+      </div>
+
+          <div class="ana">
+            <p>Gauge</p> 
+            <div class="graph" style="display: flex;align-items: center;justify-content: center;">
+            <div id='mydiv' class="graph" style="width: 600px"></div> 
+              </div>
+          </div>
+            <div class="ana">
+            <p>Bar Graph</p> 
+            <div id='myDiv' class="graph"></div>
+        </div>
+        
+      <script>
+          var data = [
+    {
+      domain: { x: [0, 1], y: [0, 1] },
+      value: {{avg}},
+      title: { text: "Total Average Accuracy(in %)" },
+      type: "indicator",
+      mode: "gauge+number",
+      delta: { reference: 400 },
+      gauge: {bar:{color:"#660000"}, axis: { range: [null, 100] } ,
+    steps: [
+        { range: [0, 33.33], color: "#ff4400"},
+        { range: [33.33, 66.66], color: "#ff9964"},
+        { range: [66.66, 100], color: "#ffddb9"}
+      ]}
+    }
+    ];
+
+    var layout = { width: 600, height: 400};
+    Plotly.newPlot('mydiv', data, layout);
+          var trace1 = {
+    x: ['shoulders','left hand','right hand','left forearm','right forearm', 'left side of the body','right side of the body', 'waist', 'left thigh','right thigh','left crus','right crus','head','shoulders'],
+    y: {{acc}},
+    type: 'bar',
+    text: ['shoulders','left hand','right hand','left forearm','right forearm', 'left side of the body','right side of the body', 'waist', 'left thigh','right thigh','left crus','right crus','head','shoulders'],
+    marker: {
+      borderwidth: 2, bordercolor: "#000000",
+      color: '#ffddb9'
+    }
+    };
+
+    var data = [trace1];
+
+    var layout = {
+    title: 'Average Accuracy of Each Joint(in %)',
+    font:{
+      family: 'Raleway, sans-serif'
+    },
+    showlegend: false,
+    xaxis: {
+      tickangle: -45
+    },
+    yaxis: {
+      zeroline: false,
+      gridwidth: 2
+    },
+    bargap :0.05
+    };
+
+    Plotly.newPlot('myDiv', data, layout);
+
+      </script>
+
+      <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/vendor/three.r119.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+      <script>
+        VANTA.FOG({
+  el: "#vantaWaves",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0xcf5fea,
+  midtoneColor: 0x434bf9,
+  lowlightColor: 0x6e41c7,
+  baseColor: 0x202020,
+  blurFactor: 0.79,
+  speed: 5.00
+});
+        </script>    -->
+</body>
+
+</html>

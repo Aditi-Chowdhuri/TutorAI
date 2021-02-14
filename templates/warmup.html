@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../static/css/video.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>{{course['name']}}</title>
+  <link rel="icon" href="../static/images/favicon.png">
+</head>
+
+<body>
+  <div class="topnav">
+    <div style=" margin-left: 10vw;">
+      <a href="/" style="float:left; margin:-20px;"><p><img style="width: 75px; height: 75px; margin:-20px;" src="../static/images/favicon.png" alt="" /></p>
+      <p style="font-size: 72px; margin: -10px; margin-left: 10px; font-family: 'Times New Roman', Times, serif;">TutorAI</p></a>
+    </div>
+    <div style=" margin-right: 10vw;">
+      <a href="/profile"><img style="width: 30px; height: 30px;" src="../static/images/profileicon.png" alt="" /></a>
+      <a href="/landing"><p style="font-size: 30px; margin: -5px;">My Tutorial</p></a>
+      <a href="/logout"><p style="font-size: 30px; margin: -5px;">Logout</p></a>
+    </div>
+  </div>
+      
+      <div class="sidenav">
+        <p>{{course['name']}}</p>
+        <hr> 
+        <a href="#">{{course['description']}}</a>
+      </div>
+      <div class="main">
+        <div class="video">
+          <video width="800" height="400" controls>
+            <source src="../static/video/{{course['vurl']}}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <a href="/practice/{{course['url']}}" class="main_a" style="margin-left: 42vw;">Practice Now</a>
+      </div>
+      <!-- <div id="vantaWaves"></div>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/vendor/three.r119.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+      <script>
+        VANTA.FOG({
+          el: "#vantaWaves",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          highlightColor: 0xcf5fea,
+          midtoneColor: 0x434bf9,
+          lowlightColor: 0x6e41c7,
+          baseColor: 0x202020,
+          blurFactor: 0.79,
+          speed: 5.00
+        });
+        </script> -->
+</body>
+
+</html>

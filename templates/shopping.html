@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../static/css/shopping.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Cart</title>
+  <link rel="icon" href="../static/images/favicon.png">
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+    <div style=" margin-left: 10vw;">
+      <a href="/" style="float:left; margin:-20px;"><p><img style="width: 75px; height: 75px; margin:-20px;" src="../static/images/favicon.png" alt="" /></p>
+      <p style="font-size: 70px; margin: -10px; margin-left: 10px; font-family: 'Times New Roman', Times, serif;">EdTutor</p></a>
+    </div>
+    <div style=" margin-right: 10vw;">
+      <a href="/profile"><img style="width: 25px; height: 25px;" src="../static/images/profileicon.png" alt="" /></a>
+      <a href="/cart"><img style="width: 25px; height: 25px;" src="../static/images/cart (1).png" alt="" /></a>
+      <a href="/landing"><p style="font-size: 25px; margin: -3px;">My Tutorial</p></a>
+      <a href="/logout"><p style="font-size: 25px; margin: -3px;">Logout</p></a>
+    </div>
+  </div>
+      <div class="shop">
+          <p>Shopping Cart</p>
+      </div>
+      {%for i in cart%}
+      <div class="c_container">
+        <img src="../static/images/{{courses[i]['img']}}" alt="" />
+        <h2 style="color: #fff; margin-top: 10px;">{{courses[i]['name']}}</h2>
+        <p style="color: #cfcfcf; font-size: 18px; margin-top: -10px;">{{courses[i]['description']}}</p>
+    </div>
+    {%endfor%}
+    <a href="#" class="main_button">Buy Now</a>
+    <div id="vantaWaves"></div>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/vendor/three.r119.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+      <script>
+        VANTA.FOG({
+          el: "#vantaWaves",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          highlightColor: 0xcf5fea,
+          midtoneColor: 0x434bf9,
+          lowlightColor: 0x6e41c7,
+          baseColor: 0x202020,
+          blurFactor: 0.79,
+          speed: 5.00
+        });
+        </script>
+      
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="WebRTC code samples">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="description" content="Client-side WebRTC code samples">
+    <meta itemprop="image" content="../../../images/webrtc-icon-192x192.png">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+
+    <base target="_blank">
+
+    <title>Workout</title>
+
+    <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/video_train.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Profile</title>
+    <link rel="icon" href="../static/images/favicon.png">
+
+</head>
+<style>
+    #container{
+        width: 500px;
+        float: left;
+        margin-left: 50px;
+    }
+    #gum{
+        background-color: aliceblue;
+        margin-top: 110px;
+        height: 500px;
+    }
+    video{
+        width: 800px;
+        height: 600px;
+    }
+    #bt1{
+        width: 800px;
+        margin-top: 50px;
+        float: left;
+    }
+    #bt1 button{
+        border-radius: 5em;
+        color: #e9a246;
+        background: #202124;
+        padding: 10px;
+        margin-right: 100px;
+        width: 120px;
+    }
+    .main{
+        float: left;
+        width: 800px;
+        height: 550px;
+        margin-top: 100px;
+        margin-left: 400px;
+    }
+    .main a{
+        margin-top: 280px;
+    }
+    .video{
+        width: 900px;
+        height: 600px;
+        margin-top: -100px;
+        margin-left: 0px;
+    }
+    #recorded{
+        margin-top: -600px;
+    }
+    #myfile{
+        margin-top: -5vh;
+        margin-left: 55vw;
+        color: #000000;
+        cursor: pointer;
+        float: left;
+
+    }
+    #myfile::-webkit-file-upload-button {
+    visibility: hidden;
+    }
+    #myfile::before {
+    content: 'Upload';
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 5em;
+    padding: 10px;
+    padding-left: 5px;
+    padding-right: 125px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 10pt;
+    }
+    #myfile::before {
+    border-color: black;
+    background-color: #202124;
+    }
+    #myfile:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+    #sub{
+        border-radius: 5em;
+        color: #e9a246;
+        background: #202124;
+        padding: 10px;
+        margin-top: -6vh;
+        margin-left: 75vw;
+        width: 120px;
+        float: left;
+    }
+    @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+    #inst{
+        padding-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 700px;
+        height: 300px;
+        float: left;
+    }
+    ul{
+        width: 600px;
+    }
+
+    li{
+        font-family: 'Source Code Pro', monospace; 
+        font-weight: bolder;
+        font-size: 20;
+    }
+    h1{
+        font-family: 'Source Code Pro', monospace; 
+        font-weight: bolder;
+    }
+</style>
+<body>
+    <div class="topnav">
+        <div style=" margin-left: 10vw;">
+          <a href="/" style="float:left; margin:-20px;"><p><img style="width: 75px; height: 75px; margin:-20px;" src="../static/images/favicon.png" alt="" /></p>
+          <p style="font-size: 70px; margin: -10px; margin-left: 10px; font-family: 'Times New Roman', Times, serif;">EdTutor</p></a>
+        </div>
+        <div style=" margin-right: 10vw;">
+          <a href="/profile"><img style="width: 30px; height: 30px;" src="../static/images/profileicon.png" alt="" /></a>
+          <a href="/landing"><p style="font-size: 30px; margin: -3px;">My Tutorial</p></a>
+          <a href="/logout"><p style="font-size: 30px; margin: -3px;">Logout</p></a>
+        </div>
+      </div>
+      
+
+<div id="container">
+
+    <video id="gum" playsinline autoplay muted></video>
+    <video id="recorded" playsinline loop></video>
+
+    <div id="bt1">
+        <button id="start">Start camera</button>
+        <button id="record" disabled>Start Recording</button>
+        <button id="download" disabled>Download</button>
+        <button id="play" disabled hidden>Play</button>
+    </div>
+    <div>
+        <form target="_self" method="POST" enctype="multipart/form-data">
+            <input type="file" id="myfile" name="myfile" accept=".webm">
+            <input type="submit" value = "Finish" id="sub">
+        </form>
+      </div>
+    <div hidden>
+        <h4>Media Stream Constraints options</h4>
+        <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+    </div>
+
+    <div hidden>
+        <span id="errorMsg"></span>
+    </div>
+
+
+</div>
+<div class="main">
+    <div class="video">
+        <video id="vid2" width="800" height="600" controls>
+            <source src="../static/video/{{course['vurl']}}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+    </div>
+
+  </div>
+  <br/>
+  <div id="inst" style="margin-top: 15vh; margin-left: 35 vw; background-color: blanchedalmond; border: 1px;">
+    <h1>Instructions:</h1>
+    <ul>
+        <li id="a"> Press webcam button to enable live feed. </li><br>
+        <li id="b">Start Recording to perform a particular routine through your tutor's video. Match your routine as much as possible to avoid injury.</li><br>
+        <li id="c">Upload the recorded video to analyze it and enable feedback</li><br>
+    </ul>
+</div>
+
+  <!-- <div id="vantaWaves" style="min-height: 130vh;"></div>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/vendor/three.r119.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+  <script>
+    VANTA.FOG({
+el: "#vantaWaves",
+mouseControls: true,
+touchControls: true,
+gyroControls: false,
+minHeight: 200.00,
+minWidth: 200.00,
+highlightColor: 0xcf5fea,
+midtoneColor: 0x434bf9,
+lowlightColor: 0x6e41c7,
+baseColor: 0x202020,
+blurFactor: 0.79,
+speed: 5.00
+});
+    </script> -->
+<!-- include adapter for srcObject shim -->
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="../static/js/main.js" async></script>
+<script src="../../../js/lib/ga.js"></script>
+
+</body>
+</html>
